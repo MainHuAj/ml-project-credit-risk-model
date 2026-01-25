@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-MODEL_PATH = "/Users/abhinavjain/ml-project-credit-risk-model/artifacts"
+MODEL_PATH = "artifacts/model_data.joblib"
 
 #Loan the model
 model_data = joblib.load(MODEL_PATH)
@@ -72,8 +72,11 @@ def calculate_credit_score(input_df,base_score = 300,scale_length = 600):
             return 'Undefined'
 
     rating = get_rating(credit_score[0])
-        
-    return default_probability.flatten()[0]*100 , int(credit_score) , rating
+
+    # Ensure we return Python scalars (float for probability, int for credit score)
+    prob_percent = float(default_probability.flatten()[0] * 100)
+    credit_score_scalar = float(credit_score.flatten()[0])
+    return prob_percent, int(round(credit_score_scalar)), rating
 
 
 def predict(age,income,
