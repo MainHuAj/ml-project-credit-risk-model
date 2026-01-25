@@ -32,7 +32,7 @@ with row3[0]:
 with row3[1]:
     credit_utilization_ratio = st.number_input("Credit Utilization Ratio",min_value=0,max_value=100,value=30)
 with row3[2]:
-    num_open_account = st.number_input("Open Loan Amount",min_value=0,max_value=4,step=1,value=2)
+    num_open_account = st.number_input("Open Loan Account",min_value=0,max_value=4,step=1,value=2)
 
 with row4[0]:
     residence_type = st.selectbox("Residence Type",["Owned","Rented","Mortgage"])
