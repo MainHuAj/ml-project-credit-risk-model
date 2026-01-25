@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
-MODEL_PATH = "/Users/abhinavjain/ML/Credit Risk Profiling/Project2_DataCollection_Resources/artifacts/model_data.joblib"
+MODEL_PATH = "/Users/abhinavjain/ml-project-credit-risk-model/artifacts"
 
 #Loan the model
 model_data = joblib.load(MODEL_PATH)
