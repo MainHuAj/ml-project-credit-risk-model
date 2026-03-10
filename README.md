@@ -6,7 +6,7 @@ A machine learning web application that classifies loan applicants by credit ris
 
 ## Live Demo
 
-> Deploy your own or run locally (see below)
+> https://ml-project-credit-risk-model-011.streamlit.app/
 
 ---
 
